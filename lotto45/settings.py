@@ -23,7 +23,7 @@ def catalogs(root=ROOT):
 
 def load(root=None):
     p=(Path(root) if root is not None else ROOT)/'config/settings.json'
-    defaults={'language':'de','repository':'Franz-Dariwudel/6aus45','max_tips':10000}
+    defaults={'language':'de','repository':'Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45','max_tips':10000}
     if not p.exists():
         p.parent.mkdir(parents=True,exist_ok=True)
         p.write_text(json.dumps(defaults,indent=2),encoding='utf-8')

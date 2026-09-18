@@ -955,7 +955,7 @@ class App(Gtk.Application):
                 'format':['auto','csv','pdf','json','html'][r['format'].get_selected()],'priority':r['priority'].get_value_as_int()} for r in rows])
         add=Gtk.Button(label=self.t('add_page'));save=Gtk.Button(label=self.t('save'));download=Gtk.Button(label=self.t('recovery_build' if rebuild else 'download_selected'))
         for button in (add,save,download):controls.append(button)
-        database_link=Gtk.LinkButton.new_with_label('https://github.com/Franz-Dariwudel/6aus45/releases/latest/download/lotto-datenbank.zip',self.t('database_download'))
+        database_link=Gtk.LinkButton.new_with_label('https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest/download/lotto-datenbank.zip',self.t('database_download'))
         database_link.set_halign(Gtk.Align.START);box.append(database_link)
         cancel_button=Gtk.Button(label=self.t('recovery_cancel'),halign=Gtk.Align.START)
         cancel_button.set_sensitive(False);cancel_button.set_visible(True);box.append(cancel_button)
