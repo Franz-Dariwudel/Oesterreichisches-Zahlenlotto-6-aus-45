@@ -47,7 +47,7 @@
   "done": "完成",
   "language": "应用语言",
   "download": "下载语言和帮助",
-  "download_hint": "项目来源：Franz-Dariwudel/6aus45。请输入语言代码。仅安装缺少的语言和帮助文件；关闭窗口后下载会继续。",
+  "download_hint": "项目来源：Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45。请输入语言代码。仅安装缺少的语言和帮助文件；关闭窗口后下载会继续。",
   "download_done": "文件已检查；缺少安装的文件和保留的现有文件。",
   "save": "保存",
   "not_installed": "未安装",

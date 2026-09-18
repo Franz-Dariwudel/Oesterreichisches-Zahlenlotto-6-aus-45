@@ -47,7 +47,7 @@
   "done": "Fertig",
   "language": "Programmsprache",
   "download": "Sprachen und Hilfe herunterladen",
-  "download_hint": "Projektquelle: Franz-Dariwudel/6aus45. Sprachcode eingeben. Nur fehlende Sprach- und Hilfedateien werden ergänzt; ein laufender Download wird nach dem Schließen fortgesetzt.",
+  "download_hint": "Projektquelle: Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45. Sprachcode eingeben. Nur fehlende Sprach- und Hilfedateien werden ergänzt; ein laufender Download wird nach dem Schließen fortgesetzt.",
   "download_done": "Dateien geprüft; fehlende Dateien installiert, vorhandene erhalten.",
   "save": "Speichern",
   "not_installed": "nicht installiert",

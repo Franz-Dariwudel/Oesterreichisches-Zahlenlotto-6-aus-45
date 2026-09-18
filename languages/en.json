@@ -47,7 +47,7 @@
   "done": "Done",
   "language": "Application language",
   "download": "Download languages and help",
-  "download_hint": "Project source: Franz-Dariwudel/6aus45. Enter a language code. Only missing language and help files are installed; active downloads continue after closing this dialog.",
+  "download_hint": "Project source: Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45. Enter a language code. Only missing language and help files are installed; active downloads continue after closing this dialog.",
   "download_done": "Files checked; missing files installed and existing files preserved.",
   "save": "Save",
   "not_installed": "not installed",

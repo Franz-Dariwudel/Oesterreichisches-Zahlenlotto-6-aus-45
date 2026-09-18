@@ -47,7 +47,7 @@
   "done": "Concluído",
   "language": "Idioma do aplicativo",
   "download": "Baixe idiomas e ajuda",
-  "download_hint": "Projeto: Franz-Dariwudel/6aus45. Introduza o código do idioma. Apenas os ficheiros de idioma e ajuda em falta são instalados; a transferência continua após fechar a janela.",
+  "download_hint": "Projeto: Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45. Introduza o código do idioma. Apenas os ficheiros de idioma e ajuda em falta são instalados; a transferência continua após fechar a janela.",
   "download_done": "Arquivos verificados; arquivos ausentes instalados e arquivos existentes preservados.",
   "save": "Salvar",
   "not_installed": "não instalado",
