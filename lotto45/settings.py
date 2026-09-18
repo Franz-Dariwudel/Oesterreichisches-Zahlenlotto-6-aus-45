@@ -21,6 +21,21 @@ def catalogs(root=ROOT):
     return result
 
 
+def language_options(root=ROOT):
+    """Lokale und zum Download angebotene Sprachen dynamisch zusammenführen."""
+    local=catalogs(root)
+    names={code:value.get('language_name',code) for code,value in local.items()}
+    try:
+        index=json.loads((root/'resources/language-index.json').read_text())
+        for code in index['languages']:
+            if isinstance(code,str) and re.fullmatch(r'[a-z]{2}(?:-[A-Za-z]{2})?',code):
+                name=index.get('names',{}).get(code,code)
+                names.setdefault(code,name if isinstance(name,str) else code)
+    except (OSError,ValueError,KeyError,TypeError):
+        logging.exception('L005: Verfügbare Sprachen konnten nicht gelesen werden')
+    return sorted(names.items())
+
+
 def load(root=None):
     p=(Path(root) if root is not None else ROOT)/'config/settings.json'
     defaults={'language':'de','repository':'Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45','max_tips':10000}
@@ -59,6 +74,27 @@ def save(value):
     tmp=path.with_suffix('.tmp'); tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2)); tmp.replace(path)
 
 
+def help_images(text):
+    """Nur lokale PNG-Hilfebilder aus dem eigenen images-Unterordner zulassen."""
+    from html.parser import HTMLParser
+    class Images(HTMLParser):
+        def __init__(self):super().__init__();self.paths=[]
+        def handle_starttag(self,tag,attrs):
+            if tag!='img':return
+            src=dict(attrs).get('src','')
+            if not re.fullmatch(r'images/[A-Za-z0-9_-]+\.png',src):
+                raise ValueError('L005: Ungültiger Hilfebildpfad')
+            if src not in self.paths:self.paths.append(src)
+    parser=Images();parser.feed(text);return parser.paths
+
+
+def help_complete(root,code):
+    try:
+        text=(root/'help'/f'{code}.html').read_text()
+        return all((root/'help'/name).is_file() for name in help_images(text))
+    except (OSError,ValueError):return False
+
+
 def download(repository, code, root=ROOT, download_dir=None, fetch=None):
     """Nur fehlende Dateien installieren. Keine eigene Übersetzung überschreiben.
 
@@ -81,23 +117,34 @@ def download(repository, code, root=ROOT, download_dir=None, fetch=None):
     if download_dir is None:
         download_dir=download_directory()
     download_dir=Path(download_dir); download_dir.mkdir(parents=True,exist_ok=True)
-    staged=[]; installed=[]
+    staged=[]; installed=[]; help_text=None
     with tempfile.TemporaryDirectory(prefix='6aus45-sprachen-',dir=download_dir) as tmp:
         for folder,extension in [('languages','json'),('help','html')]:
             target=root/folder/f'{code}.{extension}'
-            if target.exists(): continue
+            if target.exists():
+                if extension=='html':help_text=target.read_text(encoding='utf-8')
+                continue
             data=fetch(base+f'{folder}/{code}.{extension}')
             text=data.decode('utf-8')
             if extension=='json':
                 value=json.loads(text)
-                required=set(catalogs(root).get('en',{}))
+                # Ältere veröffentlichte Kataloge sind gültig; neue Schlüssel fallen auf Englisch zurück.
+                required={'language_name','language','save'}
                 if not isinstance(value,dict) or not required.issubset(value) or not value or any(not isinstance(v,str) for v in value.values()): raise ValueError('L005: Sprachdatei unvollständig')
             elif not re.search(r'<html\s[^>]*lang=[\"\']'+re.escape(code)+r'[\"\']',text,re.I) or '</html>' not in text.lower():
                 raise ValueError('L005: HTML-Hilfe fehlt oder falsche Sprache')
+            if extension=='html':help_text=text
             temporary=Path(tmp)/f'{code}.{extension}'; temporary.write_bytes(data); staged.append((target,temporary))
+        # Bilder gehören zum gleichen atomaren Installationsvorgang wie die HTML-Hilfe.
+        for name in help_images(help_text or ''):
+            target=root/'help'/name
+            if target.exists():continue
+            data=fetch(base+'help/'+name)
+            if not data.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('L005: Ungültiges Hilfebild')
+            temporary=Path(tmp)/Path(name).name;temporary.write_bytes(data);staged.append((target,temporary))
         try:
             for target,temporary in staged:
-                target.parent.mkdir(exist_ok=True)
+                target.parent.mkdir(parents=True,exist_ok=True)
                 try:
                     with target.open('xb') as out:
                         installed.append(target)

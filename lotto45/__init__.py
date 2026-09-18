@@ -1,5 +1,5 @@
 """Lotto 6 aus 45 – Datenarchiv. Copyright Josef Lehner, GPL-3.0-only."""
-VERSION = '1.0.23'
+VERSION = '1.0.28'
 
 from pathlib import Path
 import sys

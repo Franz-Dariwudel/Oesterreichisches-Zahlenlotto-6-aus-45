@@ -26,6 +26,7 @@ from .draw_search import parse_date_filter,parse_draw_numbers,search_live_draws
 from .date_display import format_date,format_log_dates,format_timestamp
 from .inventory import read_inventory
 from . import settings
+from . import github_info
 from . import archive_download
 from . import recovery
 from .widgets import entry,FixedTable,ResultArea,watch_errors,date_control
@@ -826,33 +827,53 @@ class App(Gtk.Application):
         tip_limit=self.entry(text=str(self.config.get('max_tips',10000)));box.append(tip_limit)
         box.append(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
         label=Gtk.Label(label=self.t('language'),xalign=0);box.append(label)
-        codes=sorted(self.languages); dropdown=Gtk.DropDown.new_from_strings([self.languages[c].get('language_name',c)+' ('+c+')' for c in codes]);box.append(dropdown)
+        options=settings.language_options(ROOT);codes=[code for code,name in options]
+        dropdown=Gtk.DropDown.new_from_strings([name for code,name in options]);box.append(dropdown)
         if self.config['language'] in codes:dropdown.set_selected(codes.index(self.config['language']))
-        dropdown.set_visible(len(codes)>1)
-        box.append(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
-        box.append(Gtk.Label(label=self.t('download'),xalign=0))
-        repo=self.entry(placeholder_text='owner/repository',text=self.config.get('repository',''));box.append(repo)
-        code=self.entry(placeholder_text='de, en, …');box.append(code)
         status=watch_errors(Gtk.Label(label=self.t('download_hint'),wrap=True,xalign=0));box.append(status)
-        download=Gtk.Button(label=self.t('download'),halign=Gtk.Align.START);box.append(download)
-        def fetch():
-            repository=repo.get_text().strip();language=code.get_text().strip()
-            status.set_text(self.t('busy'))
-            def done():
-                self.refresh_language(); codes[:]=sorted(self.languages)
-                dropdown.set_model(Gtk.StringList.new([self.languages[c].get('language_name',c)+' ('+c+')' for c in codes]));dropdown.set_visible(len(codes)>1)
-                if language in codes:dropdown.set_selected(codes.index(language))
-                status.set_text('✓ '+self.t('download_done'))
-            self.background(lambda:settings.download(repository,language),done)
-        download.connect('clicked',lambda *_:self.guard(fetch))
-        save=Gtk.Button(label=self.t('save'),halign=Gtk.Align.END);box.append(save)
+        save=Gtk.Button(label=self.t('save'),halign=Gtk.Align.START);box.append(save)
+        closed=threading.Event();ready=False;loading=False
+        def close(*_):closed.set();return False
+        win.connect('close-request',close)
+        def selected():
+            index=dropdown.get_selected()
+            return codes[index] if index<len(codes) else None
+        def ensure_selected(*_):
+            nonlocal ready,loading
+            if loading:return
+            language=selected();ready=False;save.set_sensitive(False)
+            if language is None:return
+            if (ROOT/'languages'/f'{language}.json').is_file() and settings.help_complete(ROOT,language):
+                ready=True;save.set_sensitive(True);status.set_text(self.t('download_hint'));return
+            loading=True;dropdown.set_sensitive(False);status.set_text(self.t('busy'))
+            repository=self.config.get('repository') or github_info.REPOSITORY
+            def completed(error):
+                nonlocal ready,loading
+                loading=False
+                if closed.is_set():return False
+                dropdown.set_sensitive(True)
+                ready=error is None;save.set_sensitive(ready)
+                if error:status.set_text('L005: '+self.t('error_help'))
+                else:
+                    self.refresh_language();status.set_text('✓ '+self.t('download_done'))
+                return False
+            def worker():
+                try:settings.download(repository,language,root=ROOT)
+                except Exception as error:
+                    logging.exception('L005: Automatischer Sprach- und Hilfedownload')
+                    GLib.idle_add(completed,str(error))
+                else:GLib.idle_add(completed,None)
+            threading.Thread(target=worker,daemon=True).start()
+        dropdown.connect('notify::selected',ensure_selected)
         def persist():
+            if not ready:return
             limit=int(tip_limit.get_text())
             if not 1<=limit<=1000000:raise ValueError('L012: '+self.t('tip_limit'))
-            self.config['max_tips']=limit
-            if codes:self.config['language']=codes[dropdown.get_selected()]
-            self.config['repository']=repo.get_text().strip();settings.save(self.config);self.refresh_language();self.rebuild();win.close()
-        save.connect('clicked',lambda *_:self.guard(persist));win.set_child(box);win.present()
+            self.config['max_tips']=limit;self.config['language']=selected()
+            settings.save(self.config);self.refresh_language();self.rebuild();win.close()
+        save.connect('clicked',lambda *_:self.guard(persist))
+        self.preferences_editor={'window':win,'language':dropdown,'codes':codes,'save':save,'status':status}
+        win.set_child(box);ensure_selected();win.present()
 
     def download_preferences(self,rebuild=False):
         """Quellen bearbeiten, Auswahl speichern und markierte Seiten importieren."""
@@ -955,8 +976,46 @@ class App(Gtk.Application):
                 'format':['auto','csv','pdf','json','html'][r['format'].get_selected()],'priority':r['priority'].get_value_as_int()} for r in rows])
         add=Gtk.Button(label=self.t('add_page'));save=Gtk.Button(label=self.t('save'));download=Gtk.Button(label=self.t('recovery_build' if rebuild else 'download_selected'))
         for button in (add,save,download):controls.append(button)
-        database_link=Gtk.LinkButton.new_with_label('https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest/download/lotto-datenbank.zip',self.t('database_download'))
-        database_link.set_halign(Gtk.Align.START);box.append(database_link)
+        # Dateiinfos als eigener Bereich; Netzwerkzugriff blockiert GTK nicht.
+        info_panel=Gtk.Box(orientation=Gtk.Orientation.VERTICAL,spacing=8)
+        info_panel.add_css_class('section-panel');box.append(info_panel)
+        info_title=Gtk.Label(label=self.t('github_file_info'),xalign=0)
+        info_title.add_css_class('heading');info_panel.append(info_title)
+        info_grid=Gtk.Grid(column_spacing=24,row_spacing=5);info_panel.append(info_grid)
+        info_values={}
+        for index,key in enumerate(('name','size','version','published')):
+            caption=Gtk.Label(label=self.t('github_file_'+key),xalign=0)
+            value=Gtk.Label(label='—',xalign=0,selectable=True,wrap=True)
+            info_grid.attach(caption,0,index,1,1);info_grid.attach(value,1,index,1,1)
+            info_values[key]=value
+        info_status=Gtk.Label(xalign=0,wrap=True);info_panel.append(info_status)
+        info_controls=Gtk.Box(spacing=8);info_panel.append(info_controls)
+        database_link=Gtk.LinkButton.new_with_label(github_info.DOWNLOAD_URL,self.t('database_download'))
+        database_link.set_halign(Gtk.Align.START);info_controls.append(database_link)
+        refresh_info=Gtk.Button(label=self.t('github_file_refresh'),halign=Gtk.Align.START)
+        info_controls.append(refresh_info)
+        info_closed=threading.Event()
+        def close_info(*_):info_closed.set();return False
+        win.connect('close-request',close_info)
+        def load_info(*_):
+            refresh_info.set_sensitive(False);info_status.set_text(self.t('github_file_loading'))
+            for value in info_values.values():value.set_text('—')
+            def apply_info(data):
+                if info_closed.is_set():return False
+                refresh_info.set_sensitive(True)
+                if data:
+                    for key,value in data.items():info_values[key].set_text(value)
+                    info_status.set_text('')
+                else:info_status.set_text('L005: '+self.t('github_file_error'))
+                return False
+            def worker():
+                try:data=github_info.release_info()
+                except Exception:
+                    logging.exception('L005: GitHub-Dateiinformationen konnten nicht geladen werden')
+                    data=None
+                GLib.idle_add(apply_info,data)
+            threading.Thread(target=worker,daemon=True).start()
+        refresh_info.connect('clicked',load_info);load_info()
         cancel_button=Gtk.Button(label=self.t('recovery_cancel'),halign=Gtk.Align.START)
         cancel_button.set_sensitive(False);cancel_button.set_visible(True);box.append(cancel_button)
         cancel_button.connect('clicked',lambda *_:(self.cancel_recovery(),self.operation_cancel.set()))
