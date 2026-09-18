@@ -1,4 +1,6 @@
-# Lotto 6 aus 45 & Joker – Version 1.0.23
+# Österreichisches Zahlenlotto 6 aus 45
+
+Version 1.0.23 · einschließlich Joker
 
 Lokales Python-/GTK-4-Programm für Österreichs Lotto und Joker. Historische
 Ziehungen und Quoten, getrennte Statistiken, profilbasierte Tippserien,
@@ -10,8 +12,8 @@ strukturieren Tipps und verbessern keine Gewinnwahrscheinlichkeit.
 
 ## Downloads
 
-- [Datenbank herunterladen (ZIP)](https://github.com/Franz-Dariwudel/6aus45/releases/latest/download/lotto-datenbank.zip)
-- [Programm und vollständiger Quellcode](https://github.com/Franz-Dariwudel/6aus45/releases/latest)
+- [Datenbank herunterladen (ZIP)](https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest/download/lotto-datenbank.zip)
+- [Programm und vollständiger Quellcode](https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest)
 
 Die Datenbank enthält 3.683 Lotto- und 3.574 Joker-Ziehungen bis 16.09.2026,
 Quoten sowie 8.145.060 Lotto-Kombinationen und 1.000.000 Joker-Nummern.
@@ -215,8 +217,9 @@ ausschließlich der gewählten Sprache. Fehlende Hilfe wird direkt gemeldet.
 
 Sprach-/Hilfedownload installiert nur fehlende Dateien aus einer explizit
 zugeordneten GitHub-Projektquelle, validiert Inhalt und entfernt eigene
-Zwischendateien. Die Projektquelle ist noch nicht veröffentlicht; es wird
-keine fremde Quelle erfunden. Deutsch und Englisch sind vollständig lokal.
+Zwischendateien. Die öffentliche Projektquelle ist
+`Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45`. Alle zehn Sprachen
+und die zugehörigen Hilfen sind vollständig enthalten.
 
 Build: `python3 build.py`. `dist/` enthält vollständigen dokumentierten
 Quellcode und installierbaren Python-3.12-Bytecode. Keine Benutzerdaten,
@@ -233,4 +236,4 @@ Der gemeinsame Prüfablauf beginnt mit der Quellenprüfung und zeigt alle vier S
 
 ## Sprachen und Menühilfe
 
-Alle zehn Sprachen sind lokal enthalten: de, en, es, fr, pt, zh, hi, ar, ru, tr. Unter Bearbeiten → Einstellungen die gewünschte Sprache auswählen und speichern. Hilfe → Erhalten öffnet die passende HTML-Hilfe mit Inhaltsverzeichnis und 53 Menübeschreibungen. Die zusätzlichen acht Übersetzungen wurden maschinell erstellt und technisch sowie bei zentralen Menübegriffen geprüft; eine vollständige muttersprachliche Prüfung steht aus. Die Sprachdateien bleiben frei bearbeitbar. Der Sprachdownload verwendet Franz-Dariwudel/6aus45 als Standardquelle.
+Alle zehn Sprachen sind lokal enthalten: de, en, es, fr, pt, zh, hi, ar, ru, tr. Unter Bearbeiten → Einstellungen die gewünschte Sprache auswählen und speichern. Hilfe → Erhalten öffnet die passende HTML-Hilfe mit Inhaltsverzeichnis und 53 Menübeschreibungen. Die zusätzlichen acht Übersetzungen wurden maschinell erstellt und technisch sowie bei zentralen Menübegriffen geprüft; eine vollständige muttersprachliche Prüfung steht aus. Die Sprachdateien bleiben frei bearbeitbar. Der Sprachdownload verwendet Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45 als Standardquelle.
