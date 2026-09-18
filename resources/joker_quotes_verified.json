@@ -1,0 +1,1044 @@
+[
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20000720_OTS0113/lotto-solosechser-mit-10-millionen-in-wien",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-07-19",
+      "nummer": "163665",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 0,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 245458700,
+          "betrag_art": "jackpot",
+          "status": "JP",
+          "roh_gewinner": "JP",
+          "roh_betrag": "2,454.587,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 7,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "7",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 61,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "61",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 732,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "732",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 7808,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "7.808",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20010101_OTS0014/lotto-doppeljackpot-zu-jahresbeginn-60-mio-warten",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-12-31",
+      "nummer": "000194",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 527194400,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "5.271.944,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 12,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "12",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 156,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "156",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1635,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.635",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 16321,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "16.321",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20001214_OTS0188/lotto-dreifachjackpot-geknackt-4-sechser-zu-je-313-mio",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-12-13",
+      "nummer": "982059",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 6,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 199959700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "6",
+          "roh_betrag": "1,999.597,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 35,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "35",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 371,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "371",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 3806,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "3.806",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 37208,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "37.208",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20001211_OTS0196/toto-59-zwoelfer-zu-je-8400-schilling",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-12-10",
+      "nummer": "612871",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 547230700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "5,472.307,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 14,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "14",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 151,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "151",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1639,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.639",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 16475,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "16.475",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20001223_OTS0044/toto-doppeljackpot-rund-2-millionen-fuer-naechsten-zwoelfer",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-12-23",
+      "nummer": "655019",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 0,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 413954000,
+          "betrag_art": "jackpot",
+          "status": "JP",
+          "roh_gewinner": "JP",
+          "roh_betrag": "4.139.540,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 21,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "21",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 141,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "141",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1386,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.386",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 13645,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "13.645",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20001218_OTS0159/bingo-zwei-bingo-gewinner-zu-je-270444-",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-12-17",
+      "nummer": "953364",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 369861700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "3,698.617,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 15,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "15",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 115,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "115",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1200,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.200",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 11828,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "11.828",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20001228_OTS0068/lotto-jackpot-zum-jahresausklang-30-mio-warten",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-12-27",
+      "nummer": "353370",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 683998600,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "6,839.986,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 4,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "4",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 99,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "99",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 788,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "788",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 7766,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "7.766",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20000629_OTS0159/lotto-jackpot-es-warten-19-millionen",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2000-06-28",
+      "nummer": "558942",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 2,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 393251300,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "2",
+          "roh_betrag": "3,932.513,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 4,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "4",
+          "roh_betrag": "100.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 93,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 1000000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "93",
+          "roh_betrag": "10.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 948,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 100000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "948",
+          "roh_betrag": "1.000,--",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 9562,
+          "waehrung": "ATS",
+          "betrag_hundertstel": 10000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "9.562",
+          "roh_betrag": "100,--",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20100114_OTS0224/lotto-52-sechser-millionen-gehen-ins-weinviertel",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2010-01-13",
+      "nummer": "884394",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 55895260,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "558.952,60",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 21,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 770000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "21",
+          "roh_betrag": "7.700,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 152,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 77000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "152",
+          "roh_betrag": "770,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1562,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.562",
+          "roh_betrag": "77,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 15590,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "15.590",
+          "roh_betrag": "7,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "6",
+          "gewinner": 159009,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 150,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "159.009",
+          "roh_betrag": "1,50",
+          "regelwerk": "6_rang_pdf"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20100315_OTS0104/lotto-19-millionen-warten-im-jackpot-von-6-aus-45",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2010-03-14",
+      "nummer": "587990",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 0,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 72469850,
+          "betrag_art": "jackpot",
+          "status": "DJP",
+          "roh_gewinner": "DJP",
+          "roh_betrag": "724.698,50",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 11,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 770000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "11",
+          "roh_betrag": "7.700,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 119,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 77000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "119",
+          "roh_betrag": "770,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1115,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.115",
+          "roh_betrag": "77,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 11708,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "11.708",
+          "roh_betrag": "7,00",
+          "regelwerk": "6_rang_pdf"
+        },
+        {
+          "klasse": "6",
+          "gewinner": 120651,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 150,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "120.651",
+          "roh_betrag": "1,50",
+          "regelwerk": "6_rang_pdf"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20030703_OTS0100/lotto-2-sechser-nach-doppeljackpot-zu-je-176-mio-euro",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2003-07-02",
+      "nummer": "127389",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 2,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 17234650,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "2",
+          "roh_betrag": "172.346,50",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 21,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "21",
+          "roh_betrag": "7.000,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 151,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 70000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "151",
+          "roh_betrag": "700,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1727,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.727",
+          "roh_betrag": "70,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 17136,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "17.136",
+          "roh_betrag": "7,00",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20030317_OTS0062/lotto-jackpot-geknackt-zwei-sechser-zu-je-1-mio-euro",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2003-03-16",
+      "nummer": "844096",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 52840510,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "528.405,10",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 21,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "21",
+          "roh_betrag": "7.000,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 193,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 70000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "193",
+          "roh_betrag": "700,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1702,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.702",
+          "roh_betrag": "70,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 17258,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "17.258",
+          "roh_betrag": "7,00",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20030605_OTS0200/lotto-drei-sechser-zu-je-rund-215000-euro",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2003-06-04",
+      "nummer": "625072",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 0,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 16418960,
+          "betrag_art": "jackpot",
+          "status": "JP",
+          "roh_gewinner": "JP",
+          "roh_betrag": "164.189,60",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 7,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "7",
+          "roh_betrag": "7.000,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 75,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 70000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "75",
+          "roh_betrag": "700,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 811,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "811",
+          "roh_betrag": "70,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 8281,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "8.281",
+          "roh_betrag": "7,00",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20030203_OTS0065/lotto-steirer-knackt-jackpot-und-gewinnt-22-mio-euro",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2003-02-02",
+      "nummer": "400705",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 0,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 36032510,
+          "betrag_art": "jackpot",
+          "status": "JP",
+          "roh_gewinner": "JP",
+          "roh_betrag": "360.325,10",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 19,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "19",
+          "roh_betrag": "7.000,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 185,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 70000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "185",
+          "roh_betrag": "700,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1786,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.786",
+          "roh_betrag": "70,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 17397,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "17.397",
+          "roh_betrag": "7,00",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  },
+  {
+    "url": "https://www.ots.at/presseaussendung/OTS_20030519_OTS0068/lotto-jackpot-mittwoch-geht-es-um-2-mio-euro",
+    "geprueft": "2026-09-15",
+    "format": "Geprüfter Datenauszug aus OTS, keine HTML-Originaldatei",
+    "record": {
+      "spiel": "joker",
+      "datum": "2003-05-18",
+      "nummer": "882922",
+      "quoten": [
+        {
+          "klasse": "1",
+          "gewinner": 1,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 22804620,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1",
+          "roh_betrag": "228.046,20",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "2",
+          "gewinner": 12,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "12",
+          "roh_betrag": "7.000,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "3",
+          "gewinner": 105,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 70000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "105",
+          "roh_betrag": "700,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "4",
+          "gewinner": 1111,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 7000,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "1.111",
+          "roh_betrag": "70,00",
+          "regelwerk": "5_rang_ots"
+        },
+        {
+          "klasse": "5",
+          "gewinner": 10874,
+          "waehrung": "EUR",
+          "betrag_hundertstel": 700,
+          "betrag_art": "je_gewinn",
+          "status": "",
+          "roh_gewinner": "10.874",
+          "roh_betrag": "7,00",
+          "regelwerk": "5_rang_ots"
+        }
+      ],
+      "zeile": 1
+    }
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "win2day · Lotto",
+    "url": "https://www.win2day.at/lotterie/lotto/lotto-statistik-zahlen-ergebnisse-download",
+    "enabled": true,
+    "game": "lotto",
+    "format": "auto",
+    "priority": 10
+  },
+  {
+    "name": "win2day · Joker",
+    "url": "https://www.win2day.at/lotterie/joker-statistik",
+    "enabled": true,
+    "game": "joker",
+    "format": "auto",
+    "priority": 10
+  },
+  {
+    "name": "GitHub · Lotto-Zahlenarchiv (ohne Quoten)",
+    "url": "https://raw.githubusercontent.com/daowa89/lottery-archive/main/at/lotto_6aus45/results.csv",
+    "enabled": false,
+    "game": "lotto",
+    "format": "auto",
+    "priority": 90
+  },
+  {
+    "name": "Joker · historisches Zahlenarchiv ab 1988 (ohne Quoten)",
+    "url": "http://mathematik.norbertsaeumel.at/serie/joker/statistik.php",
+    "enabled": false,
+    "game": "joker",
+    "format": "auto",
+    "priority": 90
+  },
+  {
+    "name": "win2day · Joker-Quoten und historische Belege",
+    "url": "https://lotterien.win2day.at/jam/drawgame/v1/public/drawResultInfo/joker?limit=5000&offset=0",
+    "enabled": true,
+    "game": "joker",
+    "format": "auto",
+    "priority": 10
+  }
+]
