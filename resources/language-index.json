@@ -10,5 +10,17 @@
     "ar",
     "ru",
     "tr"
-  ]
+  ],
+  "names": {
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
 }
