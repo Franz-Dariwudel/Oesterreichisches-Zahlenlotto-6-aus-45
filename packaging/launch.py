@@ -3,9 +3,10 @@
 import hashlib, json, os, shutil, sys
 from pathlib import Path
 from seed_database import install_database
+from installation import prepare_state
 base=Path(__file__).resolve().parent
 root=Path.home()/'.local/share/oesterreichisches-zahlenlotto'
-root.mkdir(parents=True,exist_ok=True)
+prepare_state(root)
 install_database(base,root)
 journal=root/'installation.json'
 data=json.loads(journal.read_text()) if journal.exists() else {'files':[]}

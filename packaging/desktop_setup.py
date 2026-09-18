@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """Desktop-Starter benutzerbezogen einrichten und angelegte Dateien erfassen."""
-import hashlib, json, os, pwd, shutil, subprocess, sys
+import json, os, pwd, subprocess, sys
 from pathlib import Path
 from seed_database import install_database
+from installation import prepare_state, remove_state
 BASE=Path(__file__).resolve().parent
 PREFIX=BASE.parents[2]
 NAME='oesterreichisches-zahlenlotto'
@@ -11,27 +12,9 @@ def user_setup(remove=False):
     home=Path.home(); state=home/'.local/share'/NAME
     journal=state/'installation.json'
     if remove:
-        if journal.is_file():
-            saved=json.loads(journal.read_text())
-            seed=saved.get('seed_database',{})
-            database=Path(seed.get('path','/nonexistent'))
-            if database.is_relative_to(state) and database.is_file() and not database.is_symlink():
-                with database.open('rb') as stream:unchanged=hashlib.file_digest(stream,'sha256').hexdigest()==seed['sha256']
-                if unchanged and not Path(str(database)+'-wal').exists():database.unlink()
-            for name in saved.get('files',[]):
-                path=Path(name)
-                if path.is_relative_to(home) and (path.is_symlink() or not path.is_dir()):path.unlink(missing_ok=True)
-            journal.unlink()
-        # Laufzeitdatenbanken bleiben erhalten. Nur leere eigene Ordner entfernen.
-        if state.exists():
-            for path in sorted(state.rglob('*'),key=lambda p:len(p.parts),reverse=True):
-                if path.is_dir() and not path.is_symlink():
-                    try:path.rmdir()
-                    except OSError:pass
-            try:state.rmdir()
-            except OSError:pass
+        remove_state(state,home,PREFIX/'usr/bin/6aus45')
         return
-    state.mkdir(parents=True,exist_ok=True)
+    prepare_state(state)
     install_database(BASE,state)
     data=json.loads(journal.read_text()) if journal.exists() else {'files':[]}
     try:
@@ -53,7 +36,7 @@ def user_setup(remove=False):
 def system_setup(remove=False):
     # Beim Entfernen alle Benutzer berücksichtigen, die einen Installationsnachweis besitzen.
     if remove:
-        users=[p for p in pwd.getpwall() if p.pw_uid>=1000 and (Path(p.pw_dir)/'.local/share'/NAME/'installation.json').is_file()]
+        users=[p for p in pwd.getpwall() if p.pw_uid>=1000 and (Path(p.pw_dir)/'.local/share'/NAME).exists()]
     else:
         users=[]
         result=subprocess.run(['loginctl','list-sessions','--no-legend'],capture_output=True,text=True)
@@ -71,5 +54,9 @@ def system_setup(remove=False):
         subprocess.run(['runuser','-u',user.pw_name,'--','/usr/bin/python3','-B',str(__file__),'--remove' if remove else '--user'],env=env,check=True)
 
 if __name__=='__main__':
-    if '--system' in sys.argv:system_setup('--remove' in sys.argv)
-    else:user_setup('--remove' in sys.argv)
+    try:
+        if '--system' in sys.argv:system_setup('--remove' in sys.argv)
+        else:user_setup('--remove' in sys.argv)
+    except Exception as error:
+        print('L006: Installation/Deinstallation fehlgeschlagen:',error,file=sys.stderr)
+        sys.exit(1)
