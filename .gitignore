@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+config/
+logs/
+data/
+dist/
+work/
+start.sh
+*.sqlite3*
