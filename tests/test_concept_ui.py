@@ -47,6 +47,32 @@ class ConceptUITests(unittest.TestCase):
         self.assertEqual(first['name'].get_text(),'Ungespeicherte Änderung')
         self.app.source_dialog.close()
 
+    def test_language_selection_downloads_matching_help_automatically(self):
+        import shutil,threading
+        from lotto45 import settings
+        root=self.root/'language-editor';(root/'languages').mkdir(parents=True);(root/'help').mkdir();(root/'resources').mkdir()
+        for code in ('de','en'):
+            shutil.copy2(settings.ROOT/'languages'/f'{code}.json',root/'languages'/f'{code}.json')
+            shutil.copy2(settings.ROOT/'help'/f'{code}.html',root/'help'/f'{code}.html')
+        shutil.copytree(settings.ROOT/'help/images',root/'help/images')
+        (root/'resources/language-index.json').write_text(json.dumps({'languages':['de','en','fr'],'names':{'fr':'Français'}}))
+        release=threading.Event();calls=[]
+        def download(repository,code,root):
+            calls.append(code);release.wait(5)
+            shutil.copy2(settings.ROOT/'languages'/f'{code}.json',root/'languages'/f'{code}.json')
+            shutil.copy2(settings.ROOT/'help'/f'{code}.html',root/'help'/f'{code}.html')
+        with patch('lotto45.app.ROOT',root),patch('lotto45.settings.download',side_effect=download):
+            self.app.preferences();editor=self.app.preferences_editor
+            try:
+                editor['language'].set_selected(editor['codes'].index('fr'))
+                self.wait(lambda:bool(calls));self.assertFalse(editor['save'].get_sensitive())
+                release.set();self.wait(lambda:editor['save'].get_sensitive())
+                self.assertEqual(calls,['fr']);self.assertTrue((root/'help/fr.html').exists())
+                with patch('lotto45.settings.save') as save,patch.object(self.app,'rebuild'):
+                    editor['save'].emit('clicked')
+                    self.assertEqual(save.call_args[0][0]['language'],'fr')
+            finally:release.set();editor['window'].close()
+
     def test_combined_check_action(self):
         from lotto45.services import update_check_report
         self.assertIsNone(self.app.lookup_action('probe-sources'))

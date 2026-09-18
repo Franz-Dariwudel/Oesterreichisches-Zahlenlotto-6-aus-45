@@ -62,3 +62,23 @@ class LocalizationTests(unittest.TestCase):
         for code in CODES:
             with patch.object(date_display,'LANGUAGE',code):
                 self.assertTrue(date_display.format_date('2026-09-18').startswith(date_display.WEEKDAYS[code][4]))
+
+    def test_help_images_are_downloaded_and_checked(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            def fetch(url):
+                if url.endswith('language-index.json'):return b'{"languages":["fr"]}'
+                if url.endswith('fr.json'):return b'{"language_name":"French","language":"Language","save":"Save"}'
+                if url.endswith('fr.html'):return b'<html lang="fr"><img src="images/example.png"></html>'
+                return b'\x89PNG\r\n\x1a\nexample'
+            settings.download('example/project','fr',root,root/'Downloads',fetch)
+            self.assertTrue(settings.help_complete(root,'fr'))
+            (root/'help/images/example.png').unlink()
+            self.assertFalse(settings.help_complete(root,'fr'))
+            settings.download('example/project','fr',root,root/'Downloads',fetch)
+            self.assertTrue(settings.help_complete(root,'fr'))
+            self.assertEqual(list((root/'Downloads').iterdir()),[])
+    def test_help_image_paths_cannot_escape(self):
+        for src in ('../private.png','/tmp/image.png','https://example.com/image.png','images/../../private.png'):
+            with self.subTest(src=src),self.assertRaises(ValueError):
+                settings.help_images('<img src="'+src+'">')

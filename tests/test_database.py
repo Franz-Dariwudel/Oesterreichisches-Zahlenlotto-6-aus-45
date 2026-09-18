@@ -61,7 +61,7 @@ class DownloadTest(unittest.TestCase):
  def tearDown(self):self.tmp.cleanup()
  def fetch(self,url):
   if url.endswith('language-index.json'):return b'{"languages":["de","en"]}'
-  if url.endswith('.json'):return b'{"hello":"Hallo"}'
+  if url.endswith('.json'):return b'{"hello":"Hallo","language_name":"Deutsch","language":"Sprache","save":"Speichern"}'
   return b'<html lang="de"><body>Hilfe</body></html>'
  def test_success_preservation_cleanup(self):
   self.assertEqual(download('owner/project','de',self.root,self.downloads,self.fetch),2)
