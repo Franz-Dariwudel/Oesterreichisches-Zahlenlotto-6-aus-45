@@ -1,6 +1,6 @@
 # Österreichisches Zahlenlotto 6 aus 45
 
-Version 1.0.23 · einschließlich Joker
+Version 1.0.28 · einschließlich Joker
 
 Lokales Python-/GTK-4-Programm für Österreichs Lotto und Joker. Historische
 Ziehungen und Quoten, getrennte Statistiken, profilbasierte Tippserien,
@@ -221,8 +221,8 @@ Zwischendateien. Die öffentliche Projektquelle ist
 `Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45`. Alle zehn Sprachen
 und die zugehörigen Hilfen sind vollständig enthalten.
 
-Build: `python3 build.py`. `dist/` enthält vollständigen dokumentierten
-Quellcode und installierbaren Python-3.12-Bytecode. Keine Benutzerdaten,
+Build: `python3 build.py`. `auslieferung/` enthält vollständigen dokumentierten
+Quellcode und das fertige DEB-Paket. Der Python-3.12-Bytecode liegt als Zwischenpaket unter `work/build/`. Keine Benutzerdaten,
 Einstellungen, Logs, Testarchive oder privaten Starter werden paketiert.
 Tests: `.venv/bin/python -m unittest discover -s tests -v` (GTK-Tests benötigen
 eine grafische Sitzung). Systemkomponenten und Drittbibliotheken behalten
@@ -237,3 +237,43 @@ Der gemeinsame Prüfablauf beginnt mit der Quellenprüfung und zeigt alle vier S
 ## Sprachen und Menühilfe
 
 Alle zehn Sprachen sind lokal enthalten: de, en, es, fr, pt, zh, hi, ar, ru, tr. Unter Bearbeiten → Einstellungen die gewünschte Sprache auswählen und speichern. Hilfe → Erhalten öffnet die passende HTML-Hilfe mit Inhaltsverzeichnis und 53 Menübeschreibungen. Die zusätzlichen acht Übersetzungen wurden maschinell erstellt und technisch sowie bei zentralen Menübegriffen geprüft; eine vollständige muttersprachliche Prüfung steht aus. Die Sprachdateien bleiben frei bearbeitbar. Der Sprachdownload verwendet Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45 als Standardquelle.
+
+## DEB-Paket für Linux Mint 22 / Ubuntu 24.04 (amd64)
+
+Für Version 1.0.28 wird vorerst kein neues DEB erstellt oder veröffentlicht.
+Die folgenden Angaben beschreiben den bisherigen lokalen Paketstand 1.0.27 und den optionalen Bauweg.
+
+`oesterreichisches-zahlenlotto_1.0.27_amd64.deb` per Doppelklick oder mit
+`sudo apt install ./oesterreichisches-zahlenlotto_1.0.27_amd64.deb` installieren.
+Python 3.12 und GTK 4 werden vorausgesetzt; benötigte Systempakete löst apt auf.
+Ein Menüeintrag und ein Desktop-Starter mit dem 3D-Programmicon werden eingerichtet.
+Ist keine eindeutige grafische Sitzung aktiv, erfolgt die Desktop-Einrichtung bei
+der nächsten Anmeldung. Benutzerdateien liegen unter
+`~/.local/share/oesterreichisches-zahlenlotto/`. Die Entwicklungsinstallation bleibt separat.
+
+Entfernen: `sudo apt remove oesterreichisches-zahlenlotto`. Erfasste Programmdateien,
+Desktop-Starter und erzeugte Einstellungen werden entfernt; eigene Datenbanken und
+Exporte bleiben erhalten. Vorher das Programm schließen.
+
+Bauen: `.venv/bin/python build.py`, anschließend `python3 build_deb.py`.
+Das DEB enthält die bereinigte Lotto-/Joker-Datenbank. Bei der Einrichtung wird sie
+für den Benutzer installiert, sofern noch keine Datenbank vorhanden ist. Bestehende
+Datenbanken werden nicht überschrieben. Ein separates Herunterladen ist bei einer
+Neuinstallation nicht nötig. Unveränderte mitgelieferte Datenbanken werden bei der
+Deinstallation entfernt, später bearbeitete Datenbanken bleiben erhalten.
+
+Fertige Ausgaben: `auslieferung/`. Zwischenpakete: `work/build/`.
+`dist/` wird nicht mehr verwendet. Der DEB-Bau verwendet als Datenbankeingabe
+`work/publication/lotto-datenbank.zip` (bereinigtes Datenbankarchiv).
+
+## Bebilderte Programmhilfe
+
+Alle zehn Hilfesprachen enthalten die ausführliche Einstellungsreferenz mit Standardwerten, Wertebereichen und Wirkungen.
+Alle zehn Hilfen führen sämtliche 53 Menüaktionen auf und enthalten echte
+GTK-Aufnahmen mit ausdrücklich gekennzeichneten Beispieldaten. Die Bilder liegen
+unter `help/images/` und funktionieren ohne Internet.
+
+Aufnahmen erneuern: `.venv/bin/python tools/capture_help.py`.
+Kapitel erzeugen: `python3 tools/illustrated_help.py`.
+Prüfen: `.venv/bin/python -m unittest discover -s tests -p test_localization.py`.
+Fertige Pakete liegen in `auslieferung/`; temporäre Bau- und Prüfdaten in `work/`.

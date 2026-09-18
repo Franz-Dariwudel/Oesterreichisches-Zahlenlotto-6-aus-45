@@ -1,3 +1,29 @@
+# Version 1.0.28 – 18.09.2026
+
+- Vollständige bebilderte Einstellungsreferenz in allen zehn Hilfesprachen; Zahlenwerte und Formatfelder unverändert.
+- Aktuelle Hilfeaufnahmen und gewünschte Grafik für Desktop- und Programmicon.
+- Veröffentlichung von Quellcode, Sprach-/Hilfedateien und bereinigtem Datenbankarchiv; noch kein neues DEB.
+
+# Version 1.0.27 – 18.09.2026
+
+- Bebilderte HTML-Hilfe für sämtliche Menüaktionen; ausführliche Einstellungsreferenz und geprüfte GTK-Aufnahmen mit Beispieldaten.
+- Hilfebilder werden bei fehlender Hilfe automatisch mitgeladen und lokal bereitgestellt.
+
+# Version 1.0.26 – 18.09.2026
+
+- Eine Sprachauswahl für lokale und verfügbare Sprachen; fehlende Sprachdatei und passende Hilfe automatisch im Hintergrund laden. Freie Sprachcode-Eingabe entfernt.
+
+# Version 1.0.25 – 18.09.2026
+
+- Bereinigte Datenbank direkt im DEB; atomare Installation mit Prüfsumme und Schutz vorhandener Datenbanken.
+- Vom Benutzer gewähltes 6-aus-45-Bild als Programm-, Menü- und Desktop-Icon.
+
+# Version 1.0.24 – 18.09.2026
+
+- DEB-Paket für Linux Mint 22 mit Menüeintrag und automatisch eingerichteter Desktop-Verknüpfung.
+
+- GitHub-Dateiinformationen im Downloadfenster: Dateiname, Größe, Release-Version und Veröffentlichungsdatum; im Hintergrund geladen und aktualisierbar.
+
 # Version 1.0.23 – 18.09.2026
 
 - GitHub-Veröffentlichung vorbereitet, Datenbank-Downloadlink in README, allen Hilfen und Download-Dialog ergänzt.
