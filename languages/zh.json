@@ -47,7 +47,7 @@
   "done": "完成",
   "language": "应用语言",
   "download": "下载语言和帮助",
-  "download_hint": "项目来源：Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45。请输入语言代码。仅安装缺少的语言和帮助文件；关闭窗口后下载会继续。",
+  "download_hint": "请选择语言。缺少的语言和帮助文件会自动下载。点击保存以应用。关闭此窗口后下载仍会继续。",
   "download_done": "文件已检查；缺少安装的文件和保留的现有文件。",
   "save": "保存",
   "not_installed": "未安装",
@@ -496,5 +496,13 @@
   "combined_error": "错误",
   "combined_stopped": "未运行/取消",
   "language_name": "中文",
-  "database_download": "下载数据库"
+  "database_download": "下载数据库",
+  "github_file_info": "GitHub · 数据库文件",
+  "github_file_name": "文件名",
+  "github_file_size": "文件大小",
+  "github_file_version": "版本",
+  "github_file_published": "发布时间",
+  "github_file_refresh": "刷新信息",
+  "github_file_loading": "正在加载文件信息…",
+  "github_file_error": "文件信息不可用。请检查网络连接并重试。"
 }

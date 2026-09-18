@@ -47,7 +47,7 @@
   "done": "Bitti",
   "language": "Uygulama dili",
   "download": "Dilleri indirin ve yardım",
-  "download_hint": "Proje: Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45. Dil kodunu girin. Yalnızca eksik dil ve yardım dosyaları yüklenir; pencere kapatıldıktan sonra indirme devam eder.",
+  "download_hint": "Bir dil seçin. Eksik dil ve yardım dosyaları otomatik indirilir. Uygulamak için Kaydet düğmesine basın. Pencere kapatıldıktan sonra indirme devam eder.",
   "download_done": "Dosyalar kontrol edildi; eksik dosyalar yüklendi ve mevcut dosyalar korundu.",
   "save": "Kaydet",
   "not_installed": "yüklü değil",
@@ -496,5 +496,13 @@
   "combined_error": "Hata",
   "combined_stopped": "Yürütülmedi / iptal edildi",
   "language_name": "Türkçe",
-  "database_download": "Veritabanını indir"
+  "database_download": "Veritabanını indir",
+  "github_file_info": "GitHub · Veritabanı dosyası",
+  "github_file_name": "Dosya adı",
+  "github_file_size": "Dosya boyutu",
+  "github_file_version": "Sürüm",
+  "github_file_published": "Yayın tarihi",
+  "github_file_refresh": "Bilgileri yenile",
+  "github_file_loading": "Dosya bilgileri yükleniyor…",
+  "github_file_error": "Dosya bilgileri kullanılamıyor. İnternet bağlantınızı kontrol edip yeniden deneyin."
 }

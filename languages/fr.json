@@ -47,7 +47,7 @@
   "done": "Terminé",
   "language": "Langue de candidature",
   "download": "Télécharger les langues et l'aide",
-  "download_hint": "Projet : Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45. Saisissez le code de langue. Seuls les fichiers de langue et d’aide manquants sont installés ; le téléchargement continue après la fermeture.",
+  "download_hint": "Sélectionnez une langue. Les fichiers de langue et d’aide manquants sont téléchargés automatiquement. Cliquez sur Enregistrer pour appliquer. Les téléchargements continuent après la fermeture.",
   "download_done": "Fichiers vérifiés ; fichiers manquants installés et fichiers existants préservés.",
   "save": "Enregistrer",
   "not_installed": "non installé",
@@ -496,5 +496,13 @@
   "combined_error": "Erreur",
   "combined_stopped": "Non exécuté / annulé",
   "language_name": "Français",
-  "database_download": "Télécharger la base de données"
+  "database_download": "Télécharger la base de données",
+  "github_file_info": "GitHub · Fichier de base de données",
+  "github_file_name": "Nom du fichier",
+  "github_file_size": "Taille",
+  "github_file_version": "Version",
+  "github_file_published": "Publication",
+  "github_file_refresh": "Actualiser les informations",
+  "github_file_loading": "Chargement des informations …",
+  "github_file_error": "Informations indisponibles. Vérifiez la connexion Internet et réessayez."
 }

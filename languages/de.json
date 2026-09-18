@@ -47,7 +47,7 @@
   "done": "Fertig",
   "language": "Programmsprache",
   "download": "Sprachen und Hilfe herunterladen",
-  "download_hint": "Projektquelle: Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45. Sprachcode eingeben. Nur fehlende Sprach- und Hilfedateien werden ergänzt; ein laufender Download wird nach dem Schließen fortgesetzt.",
+  "download_hint": "Sprache auswählen. Fehlende Sprach- und Hilfedateien werden automatisch heruntergeladen. Mit Speichern übernehmen. Ein laufender Download wird nach dem Schließen fortgesetzt.",
   "download_done": "Dateien geprüft; fehlende Dateien installiert, vorhandene erhalten.",
   "save": "Speichern",
   "not_installed": "nicht installiert",
@@ -496,5 +496,13 @@
   "combined_error": "Fehler",
   "combined_stopped": "Nicht ausgeführt / abgebrochen",
   "language_name": "Deutsch",
-  "database_download": "Datenbank herunterladen"
+  "database_download": "Datenbank herunterladen",
+  "github_file_info": "GitHub · Datenbankdatei",
+  "github_file_name": "Dateiname",
+  "github_file_size": "Dateigröße",
+  "github_file_version": "Version",
+  "github_file_published": "Veröffentlicht",
+  "github_file_refresh": "Infos aktualisieren",
+  "github_file_loading": "Dateiinformationen werden geladen …",
+  "github_file_error": "Dateiinformationen nicht verfügbar. Internetverbindung prüfen und erneut versuchen."
 }
