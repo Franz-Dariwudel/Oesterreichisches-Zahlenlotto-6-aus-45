@@ -12,6 +12,7 @@ strukturieren Tipps und verbessern keine Gewinnwahrscheinlichkeit.
 
 ## Downloads
 
+- [DEB installieren (Linux Mint 22 / Ubuntu 24.04, amd64)](https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest/download/oesterreichisches-zahlenlotto_1.0.28-3_amd64.deb)
 - [Datenbank herunterladen (ZIP)](https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest/download/lotto-datenbank.zip)
 - [Programm und vollständiger Quellcode](https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/latest)
 
@@ -240,27 +241,33 @@ Alle zehn Sprachen sind lokal enthalten: de, en, es, fr, pt, zh, hi, ar, ru, tr.
 
 ## DEB-Paket für Linux Mint 22 / Ubuntu 24.04 (amd64)
 
-Für Version 1.0.28 wird vorerst kein neues DEB erstellt oder veröffentlicht.
-Die folgenden Angaben beschreiben den bisherigen lokalen Paketstand 1.0.27 und den optionalen Bauweg.
+Das geprüfte DEB 1.0.28-3 ist auf GitHub verfügbar.
 
-`oesterreichisches-zahlenlotto_1.0.27_amd64.deb` per Doppelklick oder mit
-`sudo apt install ./oesterreichisches-zahlenlotto_1.0.27_amd64.deb` installieren.
+[DEB für Linux Mint herunterladen](https://github.com/Franz-Dariwudel/Oesterreichisches-Zahlenlotto-6-aus-45/releases/download/v1.0.28-3/oesterreichisches-zahlenlotto_1.0.28-3_amd64.deb)
+
+`oesterreichisches-zahlenlotto_1.0.28-3_amd64.deb` per Doppelklick oder mit
+`sudo apt install ./oesterreichisches-zahlenlotto_1.0.28-3_amd64.deb` installieren.
 Python 3.12 und GTK 4 werden vorausgesetzt; benötigte Systempakete löst apt auf.
 Ein Menüeintrag und ein Desktop-Starter mit dem 3D-Programmicon werden eingerichtet.
 Ist keine eindeutige grafische Sitzung aktiv, erfolgt die Desktop-Einrichtung bei
 der nächsten Anmeldung. Benutzerdateien liegen unter
 `~/.local/share/oesterreichisches-zahlenlotto/`. Die Entwicklungsinstallation bleibt separat.
 
-Entfernen: `sudo apt remove oesterreichisches-zahlenlotto`. Erfasste Programmdateien,
-Desktop-Starter und erzeugte Einstellungen werden entfernt; eigene Datenbanken und
-Exporte bleiben erhalten. Vorher das Programm schließen.
+Entfernen: `sudo apt remove oesterreichisches-zahlenlotto`. Programmdateien,
+Desktop-Starter, erzeugte Einstellungen und sämtliche programminternen Laufzeitdateien
+werden entfernt. Dazu gehören auch bearbeitete mitgelieferte Datenbanken, SQLite-
+Begleitdateien, interne Sicherungen, Importreste und Diagnoseberichte. Datenbanken
+und Exporte außerhalb des Installationsordners sowie nachweislich schon vor der
+Einrichtung vorhandene Dateien bleiben erhalten. Vorher das Programm schließen;
+bei laufender Ausgabe oder Löschfehlern wird die Deinstallation mit Fehler abgebrochen.
 
 Bauen: `.venv/bin/python build.py`, anschließend `python3 build_deb.py`.
 Das DEB enthält die bereinigte Lotto-/Joker-Datenbank. Bei der Einrichtung wird sie
 für den Benutzer installiert, sofern noch keine Datenbank vorhanden ist. Bestehende
 Datenbanken werden nicht überschrieben. Ein separates Herunterladen ist bei einer
-Neuinstallation nicht nötig. Unveränderte mitgelieferte Datenbanken werden bei der
-Deinstallation entfernt, später bearbeitete Datenbanken bleiben erhalten.
+Neuinstallation nicht nötig. Die mitgelieferte Datenbank wird auch nach Änderungen
+bei der Deinstallation entfernt. Benötigte Daten deshalb vorher außerhalb des
+Installationsordners sichern.
 
 Fertige Ausgaben: `auslieferung/`. Zwischenpakete: `work/build/`.
 `dist/` wird nicht mehr verwendet. Der DEB-Bau verwendet als Datenbankeingabe
@@ -277,3 +284,5 @@ Aufnahmen erneuern: `.venv/bin/python tools/capture_help.py`.
 Kapitel erzeugen: `python3 tools/illustrated_help.py`.
 Prüfen: `.venv/bin/python -m unittest discover -s tests -p test_localization.py`.
 Fertige Pakete liegen in `auslieferung/`; temporäre Bau- und Prüfdaten in `work/`.
+
+Die Paketkorrektur 1.0.28-2 setzt alle installierten Ressourcen auf lesbare Dateirechte. Dadurch funktionieren Desktop-Icon und Start auch bei Installation durch root.

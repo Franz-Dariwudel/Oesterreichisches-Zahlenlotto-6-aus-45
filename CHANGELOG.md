@@ -1,4 +1,20 @@
+# Paket 1.0.28-3 – 18.09.2026
+
+- Vollständige DEB-Deinstallation: geänderte interne Datenbanken, WAL-/SHM-Dateien, Sicherungen, Importreste und Diagnoseberichte werden mit entfernt.
+- Besitznachweis vor der Einrichtung; schon vorhandene Dateien und externe Datenbanken bleiben erhalten. Verzeichnislinks werden nicht verfolgt.
+- Laufende installierte Ausgabe verhindert die Deinstallation; Löschfehler werden mit Pfad gemeldet und nicht als Erfolg behandelt.
+- Regressionstests und DEB-Prüfung verlangen jetzt einen vollständig entfernten Installationsordner nach remove und purge; anschließende Neuinstallation prüft den vollen Datenbestand.
+- Vom Benutzer freigegeben; Veröffentlichung als DEB 1.0.28-3 mit vollständiger Datenbank und Quellcode.
+
+# Paket 1.0.28-2 – 18.09.2026
+
+- Fehler behoben: Icon wurde mit 0600 ausgeliefert und war nach root-Installation nicht lesbar; Programmstart brach mit PermissionError ab.
+- Öffentliche Paketdateien erhalten 0644, ausführbare Dateien und Verzeichnisse 0755. Rechteprüfung anhand des tatsächlichen DEB-Inhalts ergänzt.
+- Lokale Prüffassung; Veröffentlichung erst nach Benutzerfreigabe.
+
 # Version 1.0.28 – 18.09.2026
+
+- Lokale DEB-Prüffassung: GTK/Cairo-Brücke als Abhängigkeit ergänzt; Desktop-Start am sichtbaren Fenster der installierten Paketausgabe geprüft. Veröffentlichung nach Benutzerfreigabe.
 
 - Vollständige bebilderte Einstellungsreferenz in allen zehn Hilfesprachen; Zahlenwerte und Formatfelder unverändert.
 - Aktuelle Hilfeaufnahmen und gewünschte Grafik für Desktop- und Programmicon.
