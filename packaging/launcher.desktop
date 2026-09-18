@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Österreichisches Zahlenlotto 6 aus 45
+Comment=Lotto- und Joker-Archiv
+Exec=/usr/bin/6aus45
+Icon=6aus45
+Terminal=false
+Categories=Education;
+StartupNotify=true
